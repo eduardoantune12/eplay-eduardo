@@ -18,20 +18,29 @@ const Product = ({
   description,
   infos,
   image
-}: Props) => (
-  <Card>
-    <img src={image} alt={title} />
-    <Infos>
-      {infos.map((info) => (
-        <Tag size="small" key={info}>
-          {info}
-        </Tag>
-      ))}
-    </Infos>
-    <CardTitle>{title}</CardTitle>
-    <Tag size="small">{category}</Tag>
-    <Tag size="small">{system}</Tag>
-    <CardDesc>{description}</CardDesc>
-  </Card>
-)
+}: Props) => {
+  const getDescription = (description: string) => {
+    if (description.length > 95) {
+      return description.slice(0, 95) + '...'
+    }
+    return description
+  }
+
+  return (
+    <Card>
+      <img src={image} alt={title} />
+      <Infos>
+        {infos.map((info) => (
+          <Tag size="small" key={info}>
+            {info}
+          </Tag>
+        ))}
+      </Infos>
+      <CardTitle>{title}</CardTitle>
+      <Tag size="small">{category}</Tag>
+      <Tag size="small">{system}</Tag>
+      <CardDesc>{getDescription(description)}</CardDesc>
+    </Card>
+  )
+}
 export default Product

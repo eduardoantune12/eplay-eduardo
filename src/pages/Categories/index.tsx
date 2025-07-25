@@ -5,18 +5,49 @@ import diablo from '../../assets/images/diablo.png'
 import zelda from '../../assets/images/zelda.png'
 import starWars from '../../assets/images/star_wars.png'
 import { Game } from '../Home'
+import { useEffect, useState } from 'react'
 
-const promocoes: Game[] = []
+const Categories = () => {
+  const [gamesAcao, setGamesAcao] = useState<Game[]>([])
+  const [gamesEsportes, setGamesEsportes] = useState<Game[]>([])
+  const [gamesSimulacao, setGamesSimulacao] = useState<Game[]>([])
+  const [gamesLuta, setGamesLuta] = useState<Game[]>([])
+  const [gamesRPG, setGamesRPG] = useState<Game[]>([])
 
-const emBreve: Game[] = []
+  useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/eplay/acao')
+      .then((res) => res.json())
+      .then((res) => setGamesAcao(res))
 
-const Categories = () => (
-  <>
-    <ProductsList games={promocoes} title="RPG" background="darkBlue" />
-    <ProductsList games={emBreve} title="Ação" background="blue" />
-    <ProductsList games={promocoes} title="Aventura" background="darkBlue" />
-    <ProductsList games={emBreve} title="FPS" background="blue" />
-  </>
-)
+    fetch('https://fake-api-tau.vercel.app/api/eplay/esportes')
+      .then((res) => res.json())
+      .then((res) => setGamesEsportes(res))
 
+    fetch('https://fake-api-tau.vercel.app/api/eplay/simulacao')
+      .then((res) => res.json())
+      .then((res) => setGamesSimulacao(res))
+
+    fetch('https://fake-api-tau.vercel.app/api/eplay/luta')
+      .then((res) => res.json())
+      .then((res) => setGamesLuta(res))
+
+    fetch('https://fake-api-tau.vercel.app/api/eplay/rpg')
+      .then((res) => res.json())
+      .then((res) => setGamesRPG(res))
+  }, [])
+
+  return (
+    <>
+      <ProductsList games={gamesAcao} title="Ação" background="darkBlue" />
+      <ProductsList games={gamesEsportes} title="Esportes" background="blue" />
+      <ProductsList games={gamesLuta} title="Luta" background="darkBlue" />
+      <ProductsList games={gamesRPG} title="RPG" background="blue" />
+      <ProductsList
+        games={gamesSimulacao}
+        title="Simulação"
+        background="darkBlue"
+      />
+    </>
+  )
+}
 export default Categories
