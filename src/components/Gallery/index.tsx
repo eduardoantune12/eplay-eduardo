@@ -5,27 +5,24 @@ import { GalleryItem } from '../../pages/Home'
 
 import { GalItem, GalList, Action, Modal, ModalContent } from './styles'
 
-import jedi from '../../assets/images/star_wars.png'
-import spiderman from '../../assets/images/banner-homem-aranha.png'
-
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
 import fechar from '../../assets/images/fechar.png'
 
-const mock: GalleryItem[] = [
-  {
-    type: 'image',
-    url: jedi
-  },
-  {
-    type: 'image',
-    url: spiderman
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/1O6Qstncpnc?si=88TP_RCre8mcg8CX&amp;start=3'
-  }
-]
+// const mock: GalleryItem[] = [
+//   {
+//     type: 'image',
+//     url: jedi
+//   },
+//   {
+//     type: 'image',
+//     url: spiderman
+//   },
+//   {
+//     type: 'video',
+//     url: 'https://www.youtube.com/embed/1O6Qstncpnc?si=88TP_RCre8mcg8CX&amp;start=3'
+//   }
+// ]
 
 type Props = {
   defaultCover: string
