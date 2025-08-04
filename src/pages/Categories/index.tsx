@@ -34,13 +34,13 @@ const Categories = () => {
           games={sportGames}
           title="Esportes"
           background="blue"
-          id="sport"
+          id="sports"
         />
         <ProductsList
           games={fightingGames}
           title="Luta"
           background="darkBlue"
-          id="fighting"
+          id="fight"
         />
         <ProductsList games={rpgGames} title="RPG" background="blue" id="rpg" />
         <ProductsList
