@@ -4,6 +4,7 @@ import { cores } from '../../styles'
 import { Props } from '.'
 
 export const ButtonContainer = styled.button<Props>`
+  cursor: pointer;
   border-radius: 8px;
   border: 2px solid
     ${(props) => (props.variant === 'primary' ? cores.verde : cores.azulEscuro)};

@@ -21,6 +21,7 @@ export const Action = styled.div`
 
 export const GalItem = styled.li`
   position: relative;
+  cursor: zoom-in;
 
   > img {
     border-radius: 8px;
@@ -34,7 +35,7 @@ export const GalItem = styled.li`
     ${Action} {
       opacity: 1;
       transition: opacity 0.5s ease;
-      cursor: pointer;
+      cursor: zoom-in;
     }
   }
 `

@@ -1,28 +1,10 @@
 import { useState } from 'react'
-
 import Section from '../Section'
 import { GalleryItem } from '../../pages/Home'
-
-import { GalItem, GalList, Action, Modal, ModalContent } from './styles'
-
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
 import fechar from '../../assets/images/fechar.png'
-
-// const mock: GalleryItem[] = [
-//   {
-//     type: 'image',
-//     url: jedi
-//   },
-//   {
-//     type: 'image',
-//     url: spiderman
-//   },
-//   {
-//     type: 'video',
-//     url: 'https://www.youtube.com/embed/1O6Qstncpnc?si=88TP_RCre8mcg8CX&amp;start=3'
-//   }
-// ]
+import { GalItem, GalList, Action, Modal, ModalContent } from './styles'
 
 type Props = {
   defaultCover: string

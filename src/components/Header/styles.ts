@@ -17,10 +17,15 @@ export const HeaderBar = styled.header`
   border-radius: 16px;
   margin-bottom: 80px;
 
-  a {
+  a,
+  span {
     color: ${cores.branco};
     text-decoration: none;
     font-weight: bold;
+  }
+
+  h1 {
+    line-height: 0;
   }
 `
 
@@ -47,16 +52,8 @@ export const HeaderRow = styled.div`
 export const NavMobile = styled.nav`
   display: none;
 
-  @media (max-width: ${breakpoints.desktop}) {
-    &.is-open {
-      display: none;
-    }
-  }
-
-  @media (max-width: ${breakpoints.tablet}) {
-    &.is-open {
-      display: block;
-    }
+  &.is-open {
+    display: block;
   }
 `
 
@@ -67,15 +64,16 @@ export const LinkItem = styled.li`
     margin-right: 0;
 
     a {
+      padding: 16px 0;
       display: block;
-      padding: 14px 0;
       text-align: center;
     }
   }
 `
 
-export const CartButton = styled.a`
+export const CartButton = styled.span`
   display: flex;
+  cursor: pointer;
 
   img {
     margin-left: 16px;
