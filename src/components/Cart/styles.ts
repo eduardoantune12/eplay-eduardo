@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 import { ButtonContainer } from '../Button/styles'
-import fechar from '../../assets/images/fechar.png'
+import closeIcon from '../../assets/images/fechar.png'
 
 export const Overlay = styled.div`
   position: absolute;
@@ -30,7 +30,7 @@ export const CartContainer = styled.div`
 `
 
 export const Sidebar = styled.aside`
-  background-color: ${cores.azulEscuro};
+  background-color: ${colors.darkBlue};
   z-index: 1;
   padding: 40px 16px 0 16px;
   max-width: 360px;
@@ -52,19 +52,19 @@ export const GamePrice = styled.p`
   font-weight: 700;
   font-family: Inter, sans-serif;
   font-size: 14px;
-  color: ${cores.branco};
+  color: ${colors.white};
   margin-bottom: 24px;
 
   span {
     display: block;
     font-size: 12px;
-    color: ${cores.cinza};
+    color: ${colors.gray};
   }
 `
 
 export const CartItem = styled.li`
   display: flex;
-  border-bottom: 1px solid ${cores.azul};
+  border-bottom: 1px solid ${colors.blue};
   padding: 8px 0;
   position: relative;
 
@@ -76,14 +76,14 @@ export const CartItem = styled.li`
   }
 
   h3 {
-    color: ${cores.branco};
+    color: ${colors.white};
     font-weight: bold;
     font-size: 16px;
   }
 
   span {
     display: block;
-    color: ${cores.branco};
+    color: ${colors.white};
     font-weight: bold;
     font-size: 14px;
   }
@@ -95,7 +95,7 @@ export const CartItem = styled.li`
   }
 
   button {
-    background-image: url(${fechar});
+    background-image: url(${closeIcon});
     width: 16px;
     height: 16px;
     border: none;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const GalList = styled.ul`
   display: flex;
@@ -25,7 +25,7 @@ export const GalItem = styled.li`
 
   > img {
     border-radius: 8px;
-    border: 2px solid ${cores.branco};
+    border: 2px solid ${colors.white};
     width: 150px;
     height: 150px;
     object-fit: cover;

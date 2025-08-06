@@ -1,15 +1,7 @@
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 
-import {
-  HeaderBar,
-  Links,
-  LinkItem,
-  CartButton,
-  Hamburguer,
-  HeaderRow,
-  NavMobile
-} from './styles'
+import * as S from './styles'
 
 import logo from '../../assets/images/logo.svg'
 import cart from '../../assets/images/shopping-cart.svg'
@@ -29,57 +21,57 @@ const Header = () => {
   }
 
   return (
-    <HeaderBar>
-      <HeaderRow>
+    <S.HeaderBar>
+      <S.HeaderRow>
         <div>
-          <Hamburguer onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <S.Hamburguer onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <span />
             <span />
             <span />
-          </Hamburguer>
+          </S.Hamburguer>
         </div>
         <div>
           <Link to="">
             <img src={logo} alt="EGAMES" />
           </Link>
           <nav>
-            <Links>
-              <LinkItem>
+            <S.Links>
+              <S.LinkItem>
                 <Link
                   title="Clique aqui para acessar a página de categorias"
                   to="/categories"
                 >
                   Categorias
                 </Link>
-              </LinkItem>
-              <LinkItem>
+              </S.LinkItem>
+              <S.LinkItem>
                 <HashLink
                   title="Clique aqui para acessar a seção em breve"
                   to="/#coming-soon"
                 >
                   Em breve
                 </HashLink>
-              </LinkItem>
-              <LinkItem>
+              </S.LinkItem>
+              <S.LinkItem>
                 <HashLink
                   title="Clique aqui para acessar a seção de promoções"
                   to="/#on-sale"
                 >
                   Promoções
                 </HashLink>
-              </LinkItem>
-            </Links>
+              </S.LinkItem>
+            </S.Links>
           </nav>
         </div>
-        <CartButton onClick={openCart}>
+        <S.CartButton onClick={openCart}>
           {items.length}
           <span> - produtos(s)</span>
           <img src={cart} alt="Carrinho de compras" />
-        </CartButton>
-      </HeaderRow>
-      <NavMobile className={isMenuOpen ? 'is-open' : ''}>
-        <Links>
-          <LinkItem>
+        </S.CartButton>
+      </S.HeaderRow>
+      <S.NavMobile className={isMenuOpen ? 'is-open' : ''}>
+        <S.Links>
+          <S.LinkItem>
             <Link
               title="Clique aqui para acessar a página de categorias"
               to="/categories"
@@ -87,8 +79,8 @@ const Header = () => {
             >
               Categorias
             </Link>
-          </LinkItem>
-          <LinkItem>
+          </S.LinkItem>
+          <S.LinkItem>
             <HashLink
               title="Clique aqui para acessar a seção em breve"
               to="/#coming-soon"
@@ -103,10 +95,10 @@ const Header = () => {
             >
               Promoções
             </HashLink>
-          </LinkItem>
-        </Links>
-      </NavMobile>
-    </HeaderBar>
+          </S.LinkItem>
+        </S.Links>
+      </S.NavMobile>
+    </S.HeaderBar>
   )
 }
 

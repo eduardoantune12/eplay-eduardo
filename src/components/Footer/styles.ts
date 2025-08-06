@@ -1,16 +1,16 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { HashLink } from 'react-router-hash-link'
 
 export const FooterContainer = styled.footer`
-  background-color: ${cores.azulEscuro};
+  background-color: ${colors.darkBlue};
   padding: 32px 0;
   font-size: 14px;
   margin-top: 40px;
 `
 export const FooterTitle = styled.h4`
   font-size: 16px;
-  color: ${cores.branco};
+  color: ${colors.white};
   font-weight: bold;
   margin-bottom: 16px;
 `
@@ -20,7 +20,7 @@ export const FooterLinks = styled.ul`
 `
 
 export const Link = styled(HashLink)`
-  color: ${cores.cinza};
+  color: ${colors.gray};
   text-decoration: none;
   margin-right: 8px;
 `
